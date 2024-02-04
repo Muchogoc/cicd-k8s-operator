@@ -1,0 +1,27 @@
+# permissions for end users to view cibuilds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: cibuild-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: cicd-k8s-operator
+    app.kubernetes.io/part-of: cicd-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: cibuild-viewer-role
+rules:
+- apiGroups:
+  - cicd.cicd.com
+  resources:
+  - cibuilds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cicd.cicd.com
+  resources:
+  - cibuilds/status
+  verbs:
+  - get

@@ -1,0 +1,12 @@
+apiVersion: cicd.cicd.com/v1alpha1
+kind: CIBuild
+metadata:
+  labels:
+    app.kubernetes.io/name: cibuild
+    app.kubernetes.io/instance: cibuild-sample
+    app.kubernetes.io/part-of: cicd-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: cicd-k8s-operator
+  name: cibuild-sample
+spec:
+  # TODO(user): Add fields here

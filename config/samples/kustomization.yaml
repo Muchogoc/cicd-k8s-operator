@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- cicd_v1alpha1_cibuild.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
